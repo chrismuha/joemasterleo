@@ -1,3 +1,3 @@
-# website-template-book
+# The Ambient Christ
 
-This is a website template for book showcase.
+by Joe Master Leo
