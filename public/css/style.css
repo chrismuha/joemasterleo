@@ -149,6 +149,7 @@ iframe {
     background: linear-gradient(to right, #cdebff, rgba(255, 184, 184, 0.582), #4681ffc2);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+	text-align: left;
 }
 
 @keyframes gradient {
@@ -187,6 +188,7 @@ iframe {
     word-spacing: 0.2rem;
     letter-spacing: 0.05rem;
     font-size: 1rem;
+    text-align: left;
 }
 
 .custom-section span {
