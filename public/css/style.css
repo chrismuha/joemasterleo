@@ -167,7 +167,7 @@ iframe {
 .custom-section {
     position: relative;
     border-radius: 1rem;
-    text-align: center;
+    text-align: left;
     width: 70%;
     margin: 2rem auto;
     padding: 1rem;
