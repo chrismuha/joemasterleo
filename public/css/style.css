@@ -32,16 +32,14 @@ header {
     background: linear-gradient(to right, #aedfff, white, #ffd6cc);
     min-height: 80vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap-reverse;
     border-bottom: var(--main-color) 2px solid;
-    padding: 2rem;
-    overflow-x: hidden !important;
+    padding: 2rem 0;
 }
 
 header h1 {
-    text-align: start;
+    text-align: center;
 }
 
 header img {
@@ -49,7 +47,8 @@ header img {
 }
 
 header .about-book {
-    width: 30rem;
+    max-width: 30rem;
+    margin: 2rem;
 }
 
 header .header-links {
@@ -74,7 +73,6 @@ header .header-links a:hover {
 header .header-links a:first-child {
     background-color: #ff7e5f;
 }
-
 
 /* video section */
 
@@ -165,7 +163,7 @@ iframe {
 }
 /* custom sections */
 
-.custom-section {
+.custom-section-1 {
     position: relative;
     border-radius: 1rem;
     text-align: left;
@@ -179,9 +177,7 @@ iframe {
     
 }
 
-
-
-.custom-section p {
+.custom-section-1 p {
     background-color: rgba(255, 255, 255, 0.521);
     padding: 1rem;
     border-radius: 1rem;
@@ -191,12 +187,12 @@ iframe {
     text-align: left;
 }
 
-.custom-section span {
+.custom-section-1 span {
     opacity: 50%;
     font-size: 0.9rem;
 }
 
-.custom-section .contact-buttons {
+.custom-section-1 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -204,7 +200,7 @@ iframe {
     justify-content: center;
 }
 
-.custom-section .contact-buttons a {
+.custom-section-1 .contact-buttons a {
     color: white;
     padding: 0.5rem 2rem;
     background-color:#ff3838;
@@ -212,7 +208,7 @@ iframe {
     transition: 0.1s;
 }
 
-.custom-section .contact-buttons a:hover {
+.custom-section-1 .contact-buttons a:hover {
     opacity: 90%;
 }
 
@@ -242,18 +238,27 @@ footer a:hover {
     opacity: 90%;
 }
 
+.custom-section-1 .cvimage {
+    width: 100%;
+}
+
 /* mobile compability */
 @media screen and (max-width: 977px) {
-    header {
-        text-align: center;
-    }
     .header-links {
         justify-content: center;
     }
     header h1 {
         text-align: center;
     }
-    .custom-section {
+    .custom-section-1 {
         width: 95%;
     }
 }
+
+@media screen and (min-width: 501px) {
+    .custom-section-1 > img {
+        width: 30rem;
+        margin: auto;
+    }
+}
+    
