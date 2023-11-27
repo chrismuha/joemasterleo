@@ -31,9 +31,6 @@ a {
 header {
     background: linear-gradient(to right, #aedfff, white, #ffd6cc);
     min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-bottom: var(--main-color) 2px solid;
     padding: 2rem 0;
 }
@@ -42,13 +39,24 @@ header h1 {
     text-align: center;
 }
 
-header img {
-    height: 20rem;
+header h2{
+    text-align: center;
+    font-weight: 500;
 }
 
-header .about-book {
+.body-text{
     max-width: 30rem;
     margin: 2rem;
+    text-align: left;
+}
+
+.header-image{
+    margin: auto;
+    width: fit-content;
+}
+
+header img {
+    height: 20rem;
 }
 
 header .header-links {
@@ -56,6 +64,10 @@ header .header-links {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem 0;
+}
+
+.body-text p{
+    padding-bottom: 3rem;
 }
 
 header .header-links a {
