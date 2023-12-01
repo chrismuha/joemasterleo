@@ -45,9 +45,10 @@ header h2{
 }
 
 .body-text{
-    max-width: 30rem;
-    margin: 2rem;
+    max-width: 60rem;
+    padding: 2rem;
     text-align: left;
+    margin: auto;
 }
 
 .header-image{
@@ -67,7 +68,7 @@ header .header-links {
 }
 
 .body-text p{
-    padding-bottom: 3rem;
+    margin-bottom: 24pt !important;
 }
 
 header .header-links a {
@@ -86,6 +87,10 @@ header .header-links a:first-child {
     background-color: #ff7e5f;
 }
 
+.intro p{
+    border:solid 3px orange;
+    margin: 1rem 0;
+}
 /* video section */
 
 .video-section {
@@ -115,6 +120,7 @@ iframe {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .purchase-methods {
