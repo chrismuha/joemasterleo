@@ -209,6 +209,7 @@ iframe {
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 	text-align: left;
+	font-size: 18pt;
 }
 
 @keyframes gradient {
