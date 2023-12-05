@@ -15,6 +15,7 @@ html {
 body {
     font-family: 'Goudy Bookletter 1911', sans-serif;
     width: 100%;
+    font-size: 18pt;
 }
 h1 {
     font-weight: 500;
@@ -53,7 +54,7 @@ header h2{
         flex-wrap: wrap;
     }
     .review-slider {
-        width: 20rem !important;
+        width: 22rem !important;
     }
 }
 .body-text{
@@ -99,7 +100,7 @@ header .header-links a:first-child {
     background-color: #ff7e5f;
 }
 
-.top-text p, .intro-text {
+.top-text, .intro-text {
     border:solid 3px #1F5B65;
     padding: 1rem;
     margin: 1rem 0;
@@ -110,15 +111,28 @@ header .header-links a:first-child {
     margin: auto;
     padding: 2rem;
 }
+.bulleted-section b u {
+    font-size: calc(3rem - 2pt);
+}
 .bulleted-text {
     padding-left: 1rem;
 }
-
+.bulleted-text {
+    line-height: 36pt;
+}
+#seeMore, #seeLess, #seeMoreReview, #seeLessReview {
+    color: #1F5B65;
+    cursor: pointer;
+}
 .top-images {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+.top-images img {
+    width: 15rem;
+    object-fit: contain;
 }
 /* video section */
 
@@ -157,7 +171,8 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .purchase-methods .method {
@@ -168,6 +183,7 @@ iframe {
     align-items: center;
     padding: 2rem;
     border-radius: 1rem;
+    width: 17rem;
 }
 
 .purchase-methods img {
@@ -264,6 +280,43 @@ iframe {
     margin: auto;
 }
 
+/* cv */
+.custom-section-2 {
+    position: relative;
+    border-radius: 1rem;
+    text-align: left;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, #cdebff, #4681ffc2);
+}
+.custom-section-2 .cv {
+    padding: 5rem 2rem;
+    background-color: white;
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.custom-section-2 .centered-text {
+    text-align: center;
+    line-height: 36px;
+}
+.custom-section-2 a, #biography p a {
+    color: #2f81f7;
+    transition: 0.1s;
+}
+.custom-section-2 a:hover, #biography p a:hover {
+    text-decoration: underline;
+}
+
+.cv p {
+    line-height: 24pt;
+    padding: 1rem;
+}
 /* footer */
 footer {
     background-color: rgba(0, 0, 0, 0.863);
@@ -276,7 +329,7 @@ footer {
     width: 100%;
 }
 footer img {
-    height: 10rem;
+    width: 20rem;
 }
 footer a {
     color: white;
@@ -315,9 +368,22 @@ footer a:hover {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 18pt;
 }
 
+.swiper-slide p {
+    height: 20rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+}
+
+.swiper-slide p::-webkit-scrollbar {
+    background-color: #aedfff;
+    width: 0.5rem;
+}
+.swiper-slide p::-webkit-scrollbar-thumb {
+    background-color: #2f81f7;
+}
 .swiper-button-prev, .swiper-button-next {
     color: #111;
 }
@@ -329,6 +395,9 @@ footer a:hover {
     margin-top: 3rem;
 }
 
+.swiper-slide h1 {
+    text-align: left;
+}
 .review-slider .swiper-slide {
     padding: 0 5rem;
     text-align: left;
@@ -336,6 +405,10 @@ footer a:hover {
 .review-slider img {
     width: 100%;
     object-fit: contain;
+}
+
+.fa-star {
+    color: gold;
 }
 
 @media only screen and (max-width: 767px) {
