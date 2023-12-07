@@ -48,15 +48,12 @@ header h2{
 
 .top-row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    flex-wrap: wrap;
 }
-@media screen and (max-width: 800px) {
-    .top-row {
-        flex-wrap: wrap;
-    }
-    .review-slider {
-        width: 22rem !important;
-    }
-}
+
 .body-text{
     max-width: 60rem;
     padding: 2rem;
@@ -64,13 +61,8 @@ header h2{
     margin: auto;
 }
 
-.header-image{
-    margin: auto;
-    width: fit-content;
-}
-
 header img {
-    height: 20rem;
+    width: 15rem;
 }
 
 header .header-links {
@@ -78,10 +70,6 @@ header .header-links {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem 0;
-}
-
-.body-text p{
-    margin-bottom: 18pt !important;
 }
 
 header .header-links a {
@@ -100,25 +88,25 @@ header .header-links a:first-child {
     background-color: #ff7e5f;
 }
 
-.top-text, .intro-text {
-    border:solid 3px #1F5B65;
+.top-text, .intro-text, .bulleted-section, .box-text {
+    border:solid 1rem #1F5B65;
     padding: 1rem;
     margin: 1rem 0;
 }
 
-.bulleted-section {
+.bulleted-section, .link-below-bio {
     max-width: 60rem;
     margin: auto;
     padding: 2rem;
 }
-.bulleted-section b u {
+.bulleted-section b {
     font-size: calc(3rem - 2pt);
 }
 .bulleted-text {
-    padding-left: 1rem;
-}
-.bulleted-text {
     line-height: 36pt;
+}
+.bulleted-text span {
+    font-size: 2.5rem;
 }
 #seeMore, #seeLess, #seeMoreReview, #seeLessReview {
     color: #1F5B65;
@@ -131,8 +119,9 @@ header .header-links a:first-child {
     flex-wrap: wrap;
 }
 .top-images img {
-    width: 15rem;
+    width: 17.25rem;
     object-fit: contain;
+    border: 0.5rem #006571 solid;
 }
 /* video section */
 
@@ -205,14 +194,15 @@ iframe {
 /* biography section */
 
 #biography {
-    background: linear-gradient(to right, #cdebff, rgba(255, 184, 184, 0.582), #4681ffc2);
+    background: #4681ffc2;
+    /* background: linear-gradient(to right, #cdebff, rgba(255, 184, 184, 0.582), #4681ffc2); */
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	/* animation: gradient 10s ease infinite; */
 	text-align: left;
 	font-size: 18pt;
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
@@ -222,7 +212,7 @@ iframe {
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 /* custom sections */
 
 .custom-section-1 {
@@ -245,13 +235,14 @@ iframe {
     border-radius: 1rem;
     word-spacing: 0.2rem;
     letter-spacing: 0.05rem;
-    font-size: 1rem;
+    font-size: 18pt;
     text-align: left;
 }
 
 .custom-section-1 span {
     opacity: 50%;
     font-size: 0.9rem;
+    text-align: center;
 }
 
 .custom-section-1 .contact-buttons {
@@ -264,7 +255,7 @@ iframe {
     align-items: center;
 }
 
-.custom-section-1 .contact-buttons a {
+.custom-section-1 .contact-buttons a , .link-below-bio a{
     color: white;
     padding: 0.5rem 2rem;
     background-color:#32cd32;
@@ -272,7 +263,7 @@ iframe {
     transition: 0.1s;
 }
 
-.custom-section-1 .contact-buttons a:hover {
+.custom-section-1 .contact-buttons a:hover, .link-below-bio a:hover {
     opacity: 90%;
 }
 
@@ -306,11 +297,11 @@ iframe {
     text-align: center;
     line-height: 36px;
 }
-.custom-section-2 a, #biography p a {
+.custom-section-2 .cv a, #biography p a {
     color: #2f81f7;
     transition: 0.1s;
 }
-.custom-section-2 a:hover, #biography p a:hover {
+.custom-section-2 .cv a:hover, #biography p a:hover {
     text-decoration: underline;
 }
 
@@ -330,7 +321,7 @@ footer {
     width: 100%;
 }
 footer img {
-    width: 20rem;
+    width: 15rem;
 }
 footer a {
     color: white;
@@ -363,7 +354,6 @@ footer a:hover {
     
 /* swiper */
 .swiper {
-    width: 100%;
     height: 100%;
 }
 
@@ -392,7 +382,6 @@ footer a:hover {
 
 .review-slider {
     width: 40rem;
-    margin: 0 auto;
     margin-top: 3rem;
 }
 
@@ -412,20 +401,31 @@ footer a:hover {
     color: gold;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 1115px) {
+    .top-row {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 825px) {
     .review-slider {
         width: 100%;
-    }
-    .review-slider img {
-        width: 100%;
-    }
-    .review-slider .review-slider {
-        padding: 0 4rem;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .review-slider {
-        width: 30rem;
-    }
+/*links below bio*/
+.link-below-bio .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.link-below-bio .contact-buttons a {
+    background-color: #182224;
+}
+/* Upper layer codes */
+.body-text p{
+    margin-bottom: 18pt;
 }
