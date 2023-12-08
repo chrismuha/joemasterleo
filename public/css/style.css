@@ -48,15 +48,16 @@ header h2{
 
 .top-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 5rem;
     flex-wrap: wrap;
 }
 
-.body-text{
+.box-wrapper{
     max-width: 60rem;
-    padding: 2rem;
+    padding: 0rem;
     text-align: left;
     margin: auto;
 }
@@ -88,14 +89,17 @@ header .header-links a:first-child {
     background-color: #ff7e5f;
 }
 
+.intro-header {
+    margin: 2rem 0;
+}
+
 .top-text, .intro-text, .bulleted-section, .box-text {
     border:solid 1rem #1F5B65;
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 .bulleted-section, .link-below-bio {
-    max-width: 60rem;
     margin: auto;
     padding: 2rem;
 }
@@ -129,7 +133,8 @@ header .header-links a:first-child {
     position: relative;
     padding-bottom: 39.375%;
     width: 70%;
-    margin: 2rem auto;
+    margin: auto;
+    margin-top: 2rem;
 }
 
 iframe {
@@ -146,9 +151,8 @@ iframe {
     background-color: #dff3ff;
     border-radius: 1rem;
     width: 95%;
-    margin: auto;
+    margin: 2rem auto;
     padding: 1rem;
-    margin-bottom: 2rem;
 }
 
 .purchase-methods {
@@ -237,12 +241,6 @@ iframe {
     letter-spacing: 0.05rem;
     font-size: 18pt;
     text-align: left;
-}
-
-.custom-section-1 span {
-    opacity: 50%;
-    font-size: 0.9rem;
-    text-align: center;
 }
 
 .custom-section-1 .contact-buttons {
@@ -381,6 +379,7 @@ footer a:hover {
 
 
 .review-slider {
+    margin-left: 20rem;
     width: 40rem;
     margin-top: 3rem;
 }
@@ -401,10 +400,9 @@ footer a:hover {
     color: gold;
 }
 
-@media screen and (max-width: 1115px) {
-    .top-row {
-        flex-direction: column;
-        padding: 0;
+@media screen and (max-width: 1375px) {
+    .review-slider {
+        margin-left: 0 !important;
     }
 }
 @media screen and (max-width: 825px) {
@@ -421,11 +419,17 @@ footer a:hover {
     justify-content: center;
     padding: 1rem 0;
 }
-
+.link-below-bio span {
+    opacity: 50%;
+    font-size: 0.9rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 .link-below-bio .contact-buttons a {
     background-color: #182224;
 }
 /* Upper layer codes */
-.body-text p{
+.box-wrapper p{
     margin-bottom: 18pt;
 }
