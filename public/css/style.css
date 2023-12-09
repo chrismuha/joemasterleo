@@ -195,6 +195,10 @@ iframe {
 .purchase-methods a:hover {
     opacity: 90%;
 }
+
+.other-writings img {
+    max-width: 100%;
+}
 /* biography section */
 
 #biography {
@@ -403,6 +407,15 @@ footer a:hover {
 @media screen and (max-width: 1375px) {
     .review-slider {
         margin-left: 0 !important;
+    }
+    .top-row {
+        padding: 0 0.5rem;
+        padding-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 1015px) {
+    .box-wrapper {
+        margin: 0 2rem;
     }
 }
 @media screen and (max-width: 825px) {
