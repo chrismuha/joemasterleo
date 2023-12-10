@@ -153,6 +153,7 @@ iframe {
     width: 95%;
     margin: 2rem auto;
     padding: 1rem;
+    margin-bottom: 0;
 }
 
 .purchase-methods {
@@ -198,6 +199,27 @@ iframe {
 
 .other-writings img {
     max-width: 100%;
+}
+.other-writings p {
+    padding-bottom: 2rem;
+}
+.other-writings-text {
+    width: 17rem;
+    margin: auto;
+}
+.other-writings-text {
+    text-align: center;
+    border-left: #007a00 solid 0.3rem ;
+    background-color: rgba(236, 236, 236, 0.918);
+    padding: 0.5rem 1rem;
+    padding-top: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+.other-writings-text-2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem auto;
 }
 /* biography section */
 
@@ -321,6 +343,7 @@ footer {
     align-items: center;
     padding: 5rem 1rem;
     width: 100%;
+    margin-top: 2.7rem;
 }
 footer img {
     width: 15rem;
