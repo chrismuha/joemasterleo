@@ -202,9 +202,8 @@ iframe {
 .other-writings img {
     max-width: 100%;
 }
-.other-writings-text {
-    width: 17rem;
-    margin: auto;
+.other-writings-box {
+    max-width: 346px;
 }
 .other-writings-text {
     text-align: center;
@@ -214,6 +213,11 @@ iframe {
     padding-top: 2rem;
     font-weight: bold;
     line-height: 2.5rem;
+    width: 17rem;
+    margin: auto;
+}
+.larger-box {
+    max-width: 600px;
 }
 .other-writings-text-2 {
     text-align: center;
@@ -345,7 +349,7 @@ footer {
     margin-top: 2.7rem;
 }
 footer img {
-    width: 15rem;
+    width: 17.25rem;
 }
 footer a {
     color: white;
