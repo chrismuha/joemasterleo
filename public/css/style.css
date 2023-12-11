@@ -196,12 +196,11 @@ iframe {
 .purchase-methods a:hover {
     opacity: 90%;
 }
-
+.other-writings {
+    margin: 2rem 0;
+}
 .other-writings img {
     max-width: 100%;
-}
-.other-writings p {
-    padding-bottom: 2rem;
 }
 .other-writings-text {
     width: 17rem;
