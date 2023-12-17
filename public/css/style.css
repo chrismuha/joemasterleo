@@ -109,8 +109,12 @@ header .header-links a:first-child {
 .bulleted-text {
     line-height: 36pt;
 }
+.bulleted-text p {
+    padding-left: 3rem;
+}
 .bulleted-text span {
-    font-size: 2.5rem;
+    font-size: 7.5rem;
+    position: absolute;
 }
 #seeMore, #seeLess, #seeMoreReview, #seeLessReview {
     color: #1F5B65;
@@ -202,19 +206,24 @@ iframe {
 .other-writings img {
     max-width: 100%;
 }
-.other-writings-box {
+/* .other-writings-box {
     max-width: 346px;
-}
+} */
 .other-writings-text {
-    text-align: center;
+    /* text-align: center; */
     border-left: #007a00 solid 0.3rem ;
     background-color: rgba(236, 236, 236, 0.918);
     padding: 0.5rem 1rem;
-    padding-top: 2rem;
-    font-weight: bold;
+    padding-top: 4rem;
     line-height: 2.5rem;
-    width: 17rem;
-    margin: auto;
+    width: 42rem;
+    font-weight: bold;
+    /* margin: auto; */
+}
+@media screen and (max-width: 760px) {
+    .other-writings-text {
+        width: 100%;
+    }
 }
 .line {
     height: 1rem;
@@ -222,14 +231,14 @@ iframe {
     background-color: #18820a ;
     margin-bottom: 0.5rem;
 }
-.larger-box {
+/* .larger-box {
     max-width: 600px;
 }
 .other-writings-text-2 {
     text-align: center;
     font-weight: bold;
     margin: 2rem auto;
-}
+} */
 /* biography section */
 
 #biography {
@@ -355,7 +364,7 @@ footer {
     margin-top: 2.7rem;
 }
 footer img {
-    width: 17.25rem;
+    width: 35rem;
 }
 footer a {
     color: white;
@@ -374,6 +383,11 @@ footer a:hover {
 }
 
 /* mobile compability */
+@media screen and (max-width: 600px) {
+    footer img {
+        width: 100%;
+    }
+}
 @media screen and (max-width: 977px) {
     .header-links {
         justify-content: center;
