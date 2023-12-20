@@ -127,8 +127,10 @@ header .header-links a:first-child {
     flex-wrap: wrap;
 }
 .top-images img {
-    width: 17.25rem;
-    object-fit: contain;
+    /* width: 17.25rem; */
+    /* object-fit: contain; */
+    width: 260px;
+    height: 260px;
     border: 0.5rem #006571 solid;
 }
 /* video section */
@@ -148,6 +150,7 @@ iframe {
     width: 100%;
     height: 100%;
     border: #1F5B65 5px solid;
+    border-width: 5px !important;
 }
 
 /* purchase section */
@@ -203,8 +206,12 @@ iframe {
 .other-writings {
     margin: 2rem 0;
 }
+.other-writings h5 {
+    margin-bottom: 2rem;
+}
 .other-writings img {
     max-width: 100%;
+    margin-bottom: 18pt;
 }
 /* .other-writings-box {
     max-width: 346px;
@@ -214,7 +221,6 @@ iframe {
     border-left: #007a00 solid 0.3rem ;
     background-color: rgba(236, 236, 236, 0.918);
     padding: 0.5rem 1rem;
-    padding-top: 4rem;
     line-height: 2.5rem;
     width: 42rem;
     font-weight: bold;
@@ -445,7 +451,9 @@ footer a:hover {
     width: 100%;
     object-fit: contain;
 }
-
+.review-slider h2 {
+    padding-bottom: 2rem;
+}
 .fa-star {
     color: gold;
 }
@@ -486,8 +494,12 @@ footer a:hover {
     justify-content: center;
 }
 .link-below-bio .contact-buttons a {
-    background-color: #182224;
+    background-color: #00BFFF;
 }
+.link-below-bio .contact-buttons a:hover {
+    background-color: #187BCD;
+}
+
 /* Upper layer codes */
 .box-wrapper p{
     margin-bottom: 18pt;
