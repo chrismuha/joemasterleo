@@ -137,8 +137,8 @@ header .header-links a:first-child {
 
 .video-section {
     position: relative;
-    padding-bottom: 39.375%;
-    width: 70%;
+    padding-bottom: 30rem;
+    width: 50rem;
     margin: 2rem auto;
 }
 
@@ -146,10 +146,60 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50rem;
+    height: 30rem;
     border: #1F5B65 1rem solid;
     /* border-width: 5px !important; */
+}
+@media screen and (max-width:900px) {
+    .video-section {
+        width: 45rem;
+        padding-bottom: 27rem;
+    }
+    iframe {
+        width: 45rem;
+        height: 27rem;
+    }
+}
+@media screen and (max-width:800px) {
+    .video-section {
+        width: 40rem;
+        padding-bottom: 23rem;
+    }
+    iframe {
+        width: 40rem;
+        height: 23rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .video-section {
+        width: 35rem;
+        padding-bottom: 20rem;
+    }
+    iframe {
+        width: 35rem;
+        height: 20rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .video-section {
+        width: 30rem;
+        padding-bottom: 17rem;
+    }
+    iframe {
+        width: 30rem;
+        height: 17rem;
+    }
+}
+@media screen and (max-width:500px) {
+    .video-section {
+        width: 20rem;
+        padding-bottom: 12rem;
+    }
+    iframe {
+        width: 20rem;
+        height: 12rem;
+    }
 }
 
 /* purchase section */
