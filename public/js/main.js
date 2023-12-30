@@ -19,3 +19,12 @@ seeLess.addEventListener('click', (e) => {
     moreText.style.display = 'none'
     seeMore.style.display = 'block'
 })
+
+const body = document.getElementsByTagName('body');
+body.addEventListener('hover', (e) => {
+    playVideo();
+})
+function playVideo() {
+    let video = document.getElementById("myVideo");
+    video.play();
+}

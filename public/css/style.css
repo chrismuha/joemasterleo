@@ -61,7 +61,7 @@ header h2{
     margin: auto;
 }
 
-header img {
+header video {
     width: 15rem;
 }
 
@@ -551,4 +551,11 @@ footer a:hover {
 /* Upper layer codes */
 .box-wrapper p{
     margin-bottom: 18pt;
+}
+
+#myVideo::-webkit-media-controls {
+    display: none;
+}
+#myVideo {
+    pointer-events: none;
 }
