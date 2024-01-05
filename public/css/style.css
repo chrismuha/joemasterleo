@@ -47,8 +47,8 @@ header h2{
 
 .top-row {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 0 5rem;
     flex-wrap: wrap;
@@ -483,9 +483,8 @@ footer a:hover {
 
 
 .review-slider {
-    margin-left: 20rem;
     width: 40rem;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 
 .swiper-slide h1 {
