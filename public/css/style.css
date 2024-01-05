@@ -124,7 +124,7 @@ header .header-links a:first-child {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    padding-top: 50px;
+    padding-top: 25px;
     padding-bottom: 25px;
 }
 .top-images img {
