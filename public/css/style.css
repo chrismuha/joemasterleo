@@ -126,6 +126,7 @@ header .header-links a:first-child {
     flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-top: 2rem;
 }
 .top-images img {
     /* width: 17.25rem; */
