@@ -468,8 +468,8 @@ footer a:hover {
 }
 
 .swiper-slide p {
-    height: 20rem;
-    overflow-y: scroll;
+    /* height: 20rem;
+    overflow-y: scroll; */
     padding-right: 1rem;
 }
 

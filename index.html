@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="320"/>
@@ -36,7 +37,7 @@
             </div>
             <div class="review-slider book-reviews">
                 <h2>BOOK REVIEWS</h2>
-                <div class="swiper mySwiper">
+                <div class="swiper mySwiper book-review-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <h3>Crystal</h3>
@@ -175,36 +176,34 @@
                                 His theory, based on his work as well as the works of others, seeks to bring the universe back into harmony.
                             </p>
                         </div>
-                            <div class="swiper-slide">
-                                <h3>Ruth Williamson</h3>
-                                <h5>Reviewed on January 4, 2024</h5>
-                            <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                            </span>
-                            <p> A groundbreaking work bridging the ancient and modern, religious and scientific, eternal and temporal worlds.
-                                Well worth the read, and price of admission.
-                            </p>
+                        <div class="swiper-slide">
+                            <h3>Ruth Williamson</h3>
+                            <h5>Reviewed on January 4, 2024</h5>
+                        <span>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                        </span>
+                        <p> A groundbreaking work bridging the ancient and modern, religious and scientific, eternal and temporal worlds.
+                            Well worth the read, and price of admission.
+                        </p>
                         </div>
-                            <div class="swiper-slide">
-                                <h3>Chris Muha</h3>
-                                <h5>Reviewed on January 5, 2024</h5>
-                            <span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                            </span>
-                            <p> A must read for science-spirituality synthesis buffs. Joe knows!
-                            </p>
-                            </div>
+                        <div class="swiper-slide">
+                            <h3>Chris Muha</h3>
+                            <h5>Reviewed on January 5, 2024</h5>
+                        <span>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                        </span>
+                        <p> A must read for science-spirituality synthesis buffs. Joe knows!
+                        </p>
                         </div>
-                    </div>
-                        <!-- <div class="swiper-slide">
+                         <!-- <div class="swiper-slide">
                                 <h3>New Review 1</h3>
                                 <h5>Reviewed on ? ?, ?</h5>
                                 <span>
@@ -215,10 +214,24 @@
                                 </span>
                             <p> New Review 1
                             </p>
-                            </div>-->
+                        </div>-->
+                    </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
+                <script>
+                    var swiper = new Swiper('.book-review-swiper', {
+                        loop: true,
+            
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+            
+                        autoHeight: true          
+                    });
+            
+                </script>  
             </div>
         </div>
         <div class="about-book">
