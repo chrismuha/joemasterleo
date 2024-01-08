@@ -507,7 +507,12 @@ footer a:hover {
 .fa-star {
     color: gold;
 }
-
+.swiper-slide p {
+    max-height: 30rem;
+}
+.swiper-slide.overflow-needed p {
+    overflow-y: scroll;
+}
 @media screen and (max-width: 1375px) {
     .review-slider {
         margin-left: 0 !important;
@@ -527,7 +532,22 @@ footer a:hover {
         width: 100%;
     }
 }
-
+@media screen and (max-width: 550px) {
+    .top-row {
+        padding: 0;
+    }
+    .swiper-slide h1 {
+        text-align: left;
+    }
+    .review-slider .swiper-slide {
+        padding: 0 1.8rem;
+    } 
+    .swiper-button-prev, .swiper-button-next {
+        height: 2rem !important;
+        overflow: hidden;
+        margin: -0.6rem;
+    }
+}
 /*links below bio*/
 .link-below-bio .row {
     display: flex;
