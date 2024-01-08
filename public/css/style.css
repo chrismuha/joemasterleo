@@ -473,13 +473,6 @@ footer a:hover {
     padding-right: 1rem;
 }
 
-.swiper-slide p::-webkit-scrollbar {
-    background-color: #aedfff;
-    width: 0.5rem;
-}
-.swiper-slide p::-webkit-scrollbar-thumb {
-    background-color: #2f81f7;
-}
 .swiper-button-prev, .swiper-button-next {
     color: #111;
 }
@@ -545,8 +538,19 @@ footer a:hover {
     .swiper-button-prev, .swiper-button-next {
         height: 2rem !important;
         overflow: hidden;
-        margin: -0.6rem;
+        margin: -0.4rem;
     }
+}
+.overflow-needed p::-webkit-scrollbar {
+    background-color: #aedfff;
+    width: 0.5rem;
+}
+.overflow-needed p::-webkit-scrollbar-thumb {
+    background-color: #2f81f7;
+}
+.overflow-needed p {
+    scrollbar-color: #2f81f7 #aedfff;
+    scrollbar-width: thin;
 }
 /*links below bio*/
 .link-below-bio .row {
