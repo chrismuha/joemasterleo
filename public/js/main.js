@@ -19,3 +19,9 @@ seeLess.addEventListener('click', (e) => {
     moreText.style.display = 'none'
     seeMore.style.display = 'block'
 })
+
+var elements = document.querySelectorAll('.simple-bar');
+
+elements.forEach(function (element) {
+    new SimpleBar(element, { autoHide: false });
+});

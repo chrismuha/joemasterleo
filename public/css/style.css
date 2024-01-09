@@ -502,10 +502,11 @@ footer a:hover {
 }
 .swiper-slide p {
     max-height: 30rem;
+    margin-top: 18pt;
 }
-.swiper-slide.overflow-needed p {
+/* .swiper-slide.overflow-needed p {
     overflow-y: scroll;
-}
+} */
 @media screen and (max-width: 1375px) {
     .review-slider {
         margin-left: 0 !important;
@@ -541,7 +542,20 @@ footer a:hover {
         margin: -0.4rem;
     }
 }
-.overflow-needed p::-webkit-scrollbar {
+.simple-bar {
+	max-height: 30rem;
+}
+.simplebar-track {
+    background-color: #aedfff;
+    width: 0.5rem !important;
+}
+.simplebar-scrollbar {
+    background-color: #2f81f7;
+}
+.simplebar-scrollbar::before {
+    background-color: #2f81f7 !important;
+}
+/* .overflow-needed p::-webkit-scrollbar {
     background-color: #aedfff;
     width: 0.5rem;
 }
@@ -551,7 +565,7 @@ footer a:hover {
 .overflow-needed p {
     scrollbar-color: #2f81f7 #aedfff;
     scrollbar-width: thin;
-}
+} */
 /*links below bio*/
 .link-below-bio .row {
     display: flex;
