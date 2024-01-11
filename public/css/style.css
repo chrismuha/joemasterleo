@@ -50,7 +50,6 @@ header h2{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 5rem;
     flex-wrap: wrap;
 }
 
@@ -478,6 +477,12 @@ footer a:hover {
     color: #111;
 }
 
+.review-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
 .review-slider {
     width: 40rem;
@@ -513,7 +518,6 @@ footer a:hover {
         margin-left: 0 !important;
     }
     .top-row {
-        padding: 0 0.5rem;
         padding-bottom: 1rem;
     }
 }
