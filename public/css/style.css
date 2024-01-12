@@ -31,7 +31,7 @@ a {
 
 header {
     background: linear-gradient(to right, #aedfff, white, #ffd6cc);
-    min-height: 80vh;
+    /* min-height: 80vh; */
     border-bottom: var(--main-color) 2px solid;
     padding: 2rem 0;
 }
@@ -60,7 +60,7 @@ header h2{
 }
 
 header img {
-    width: 16.5rem;
+    width: 360px;
 }
 
 header .header-links {
@@ -102,7 +102,7 @@ header .header-links a:first-child {
     padding: 2rem;
 }
 .bulleted-section b {
-    font-size: calc(3rem - 8pt);
+    font-size: 36pt;
 }
 .bulleted-text {
     line-height: 36pt;
@@ -412,15 +412,19 @@ footer {
     background-color: #000000dc;
     color: white;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
+    /* justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; */
     padding: 5rem 1rem;
     width: 100%;
     margin-top: 2.7rem;
+    overflow-x: hidden;
 }
 footer img {
-    width: 35rem;
+    height: 513.50px;
+    overflow-x: hidden;
 }
 footer a {
     color: white;
@@ -439,9 +443,10 @@ footer a:hover {
 }
 
 /* mobile compability */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 475px) {
     footer img {
-        width: 100%;
+        height: unset;
+        max-width: 600px;
     }
 }
 @media screen and (max-width: 977px) {
@@ -579,7 +584,7 @@ footer a:hover {
 }
 .link-below-bio span {
     opacity: 50%;
-    font-size: 0.9rem;
+    font-size: 16pt;
     text-align: center;
     display: flex;
     justify-content: center;
