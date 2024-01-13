@@ -70,16 +70,16 @@ header h2{
 header img {
     width: 360px;
 }
-/* header video {
+header video {
     width: 360px;
-} */
+}
 @media screen and (max-width: 450px) {
     header img {
         width: 95%;
     }
-    /* header video {
+    header video {
         width: 95%;
-    } */
+    }
 }
 header .header-links {
     display: flex;
