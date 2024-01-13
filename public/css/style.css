@@ -70,9 +70,9 @@ header h2{
 header img {
     width: 360px;
 }
-header video {
-    width: 360px
-}
+/* header video {
+    width: 360px;
+} */
 @media screen and (max-width: 450px) {
     header img {
         width: 95%;
