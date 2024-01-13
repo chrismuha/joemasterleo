@@ -77,9 +77,9 @@ header img {
     header img {
         width: 95%;
     }
-    header video {
+    /* header video {
         width: 95%;
-    }
+    } */
 }
 header .header-links {
     display: flex;
