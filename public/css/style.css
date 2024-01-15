@@ -328,8 +328,8 @@ header .header-links a:first-child {
 /* biography section */
 
 #biography {
-    background: #4681ffc2;
-    /* background: linear-gradient(to right, #cdebff, #ffb8b894, #4681ffc2); */
+    background: linear-gradient(to right, #aedfff, white, #ffd6cc);
+    /* background: #4681ffc2; */
 	background-size: 400% 400%;
 	/* animation: gradient 10s ease infinite; */
 	text-align: left;
