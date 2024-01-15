@@ -114,10 +114,18 @@ header .header-links a:first-child {
     margin: auto;
     width: 70%;
 }
-
+.bulleted-section {
+    border: none;
+}
 .top-list-wrap {
     display: flex;
     align-items: flex-start;
+}
+.top-six-bullets {
+    background: white;
+}
+.next-bullets {
+    background-color: white;
 }
 @media screen and (max-width: 1580px) {
     .top-list-wrap {
@@ -125,6 +133,7 @@ header .header-links a:first-child {
     }
     .header-image {
         margin: auto;
+        padding-bottom: 2rem;
     }
     /* .header-image {
         float: left;
