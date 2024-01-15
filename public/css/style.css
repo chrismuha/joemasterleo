@@ -68,10 +68,10 @@ header h2{
     justify-content: center;
 }
 header img {
-    width: 360px;
+    width: 270px;
 }
 header video {
-    width: 360px;
+    width: 270px;
 }
 @media screen and (max-width: 450px) {
     header img {
