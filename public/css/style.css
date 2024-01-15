@@ -115,6 +115,24 @@ header .header-links a:first-child {
     width: 70%;
 }
 
+.top-list-wrap {
+    display: flex;
+    align-items: flex-start;
+}
+@media screen and (max-width: 1580px) {
+    .top-list-wrap {
+        flex-direction: column;
+    }
+    .header-image {
+        margin: auto;
+    }
+    /* .header-image {
+        float: left;
+    }
+    .top-six-bullets {
+        padding-left: 2rem;
+    } */
+}
 .bulleted-section, .link-below-bio {
     margin: auto;
     padding: 2rem;
@@ -123,6 +141,8 @@ header .header-links a:first-child {
     font-size: 26pt;
 }
 .bulleted-text {
+    display: flex;
+    flex-direction: column;
     line-height: 36pt;
 }
 .bulleted-text p {
@@ -328,7 +348,7 @@ header .header-links a:first-child {
 /* biography section */
 
 #biography {
-    background: linear-gradient(to right, #aedfff, white, #ffd6cc);
+    background: linear-gradient(to right, #aedfff, white, #ffd6cc) !important;
     /* background: #4681ffc2; */
 	background-size: 400% 400%;
 	/* animation: gradient 10s ease infinite; */
