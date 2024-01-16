@@ -161,7 +161,7 @@ header .header-links a:first-child {
     font-size: 7.5rem;
     position: absolute;
 }
-.seeMore, .seeLess, .seeMoreReview, .seeLessReview {
+.seeMore, .seeLess, .seeMoreReview, .seeLessReview, .seeMoreStyle {
     color: #1F5B65;
     cursor: pointer;
 }
