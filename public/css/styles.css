@@ -14,11 +14,11 @@ html {
 body {
     font-family: 'Goudy Bookletter 1911', sans-serif;
     width: 100%;
-    font-size: 18pt;
+    font-size: 16pt;
 }
 h1 {
     font-weight: 500;
-    font-size: 36pt;
+    font-size: 35pt;
     text-align: center;
 }
 
@@ -151,7 +151,7 @@ header .header-links a:first-child {
     padding: 24pt;
 }
 .bulleted-section b {
-    font-size: 26pt;
+    font-size: 25pt;
 }
 .bulleted-text {
     display: flex;
