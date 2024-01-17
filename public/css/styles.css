@@ -72,14 +72,15 @@ header img {
 }
 header video {
     width: 270px;
+    padding-top: 6pt;
 }
 @media screen and (max-width: 450px) {
     header img {
         width: 95%;
     }
-    header video {
-        width: 95%;
-    }
+    /* header video {
+        width: 95vw;
+    } */
 }
 header .header-links {
     display: flex;
@@ -118,8 +119,9 @@ header .header-links a:first-child {
     border: none;
 }
 .top-list-wrap {
-    display: flex;
-    align-items: flex-start;
+    /* display: flex;
+    align-items: flex-start; */
+    justify-content: center;
 }
 .top-six-bullets {
     background: white;
@@ -127,17 +129,19 @@ header .header-links a:first-child {
 .next-bullets {
     background-color: white;
 }
+.header-image {
+    float: left;
+    padding-left: 1rem;
+}
 @media screen and (max-width: 1580px) {
-    .top-list-wrap {
+    /* .top-list-wrap {
         flex-direction: column;
-    }
+    } */
     .header-image {
-        margin: auto;
-        padding-bottom: 24pt;
+        margin: 0 auto;
     }
-    /* .header-image {
-        float: left;
-    }
+    
+    /*
     .top-six-bullets {
         padding-left: 2rem;
     } */
@@ -154,12 +158,36 @@ header .header-links a:first-child {
     flex-direction: column;
     line-height: 36pt;
 }
-.bulleted-text p {
+/* .bulleted-text p {
     padding-left: 36pt;
-}
+} */
 .bulleted-text span {
     font-size: 90pt;
+    position: relative;
+}
+.next-bullets span {
     position: absolute;
+}
+.next-bullets p {
+    padding-left: 26pt;
+}
+.top-six-bullets > div {
+    display: flex;
+}
+.top-six-bullets > div:nth-child(1) {
+    display: block;
+    padding-left: 300px;
+    padding-right: 6pt;
+}
+@media screen and (max-width: 565px) {
+    .header-image {
+        margin: auto;
+        float:initial;
+        width: 95%;
+    }
+    .top-six-bullets > div:nth-child(1) {
+        padding: 0;
+    }
 }
 .seeMore, .seeLess, .seeMoreReview, .seeLessReview, .seeMoreStyle {
     color: #1F5B65;
