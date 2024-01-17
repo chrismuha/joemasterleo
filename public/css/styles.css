@@ -18,7 +18,7 @@ body {
 }
 h1 {
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 36pt;
     text-align: center;
 }
 
@@ -33,7 +33,7 @@ header {
     background: linear-gradient(to right, #aedfff, white, #ffd6cc);
     /* min-height: 80vh; */
     border-bottom: var(--main-color) 2px solid;
-    padding: 2rem 0;
+    padding: 24pt 0;
     margin: 32px 0;
 }
 
@@ -84,15 +84,15 @@ header video {
 header .header-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 12pt;
+    padding: 12pt 0;
 }
 
 header .header-links a {
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 6pt 12pt;
     background-color:#6d6d6d80;
-    border-radius: 0.2rem;
+    border-radius: 2.4pt;
     transition: 0.1s;
 }
 
@@ -105,11 +105,11 @@ header .header-links a:first-child {
 }
 
 .intro-header {
-    margin: 2rem 0;
+    margin: 24pt 0;
 }
 
 .top-text, .intro-text, .bulleted-section, .box-text {
-    border:solid 1rem #1F5B65;
+    border:solid 12pt #1F5B65;
     padding: 1rem;
     margin: auto;
     width: 70%;
@@ -133,7 +133,7 @@ header .header-links a:first-child {
     }
     .header-image {
         margin: auto;
-        padding-bottom: 2rem;
+        padding-bottom: 24pt;
     }
     /* .header-image {
         float: left;
@@ -144,7 +144,7 @@ header .header-links a:first-child {
 }
 .bulleted-section, .link-below-bio {
     margin: auto;
-    padding: 2rem;
+    padding: 24pt;
 }
 .bulleted-section b {
     font-size: 26pt;
@@ -155,10 +155,10 @@ header .header-links a:first-child {
     line-height: 36pt;
 }
 .bulleted-text p {
-    padding-left: 3rem;
+    padding-left: 36pt;
 }
 .bulleted-text span {
-    font-size: 7.5rem;
+    font-size: 90pt;
     position: absolute;
 }
 .seeMore, .seeLess, .seeMoreReview, .seeLessReview, .seeMoreStyle {
@@ -168,18 +168,18 @@ header .header-links a:first-child {
 .top-images {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 12pt;
     flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-top: 2rem;
+    margin-top: 24pt;
 }
 .top-images img {
     /* width: 17.25rem; */
     /* object-fit: contain; */
     width: 240px;
     height: 240px;
-    border: 0.5rem #006571 solid;
+    border: 6pt #006571 solid;
 }
 /* video section */
 .video-container {
@@ -200,7 +200,7 @@ header .header-links a:first-child {
     left: 0;
     width: 100%;
     height: 100%;
-    border: #1F5B65 1rem solid;
+    border: #1F5B65 12pt solid;
   }
 
 /* iframe {
@@ -267,45 +267,45 @@ header .header-links a:first-child {
     background-color: #dff3ff;
     border-radius: 1rem;
     width: 95%;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 24pt auto;
+    padding: 12pt;
     margin-bottom: 0;
 }
 
 .purchase-methods {
     width: 100%;
-    margin: 2rem 0;
+    margin: 24pt 0;
 }
 
 .method-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 24pt;
+    margin-bottom: 24pt;
 }
 
 .purchase-methods .method {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 24pt;
     justify-content: end;
     align-items: center;
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 17rem;
+    padding: 24pt;
+    border-radius: 12pt;
+    width: 204.01pt;
 }
 
 .purchase-methods img {
-    height: 4rem;
+    height: 48pt;
     object-fit: cover;
 }
 
 .purchase-methods a {
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 6pt 12pt;
     background-color:#006571 ;
-    border-radius: 0.2rem;
+    border-radius: 2.4pt;
     transition: 0.1s;
 }
 
@@ -313,10 +313,10 @@ header .header-links a:first-child {
     opacity: 90%;
 }
 .other-writings {
-    margin: 2rem 0;
+    margin: 24pt 0;
 }
 .other-writings h5 {
-    margin-bottom: 2rem;
+    margin-bottom: 24pt;
 }
 .other-writings img {
     max-width: 100%;
@@ -327,11 +327,11 @@ header .header-links a:first-child {
 } */
 .other-writings-text {
     /* text-align: center; */
-    border-left: #007a00 solid 0.3rem ;
+    border-left: #007a00 solid 3.6pt ;
     background-color: #ecececea;
-    padding: 0.5rem 1rem;
-    line-height: 2.5rem;
-    width: 42rem;
+    padding: 6pt 12pt;
+    line-height: 30pt;
+    width: 504.01pt;
     font-weight: bold;
     /* margin: auto; */
 }
@@ -341,10 +341,10 @@ header .header-links a:first-child {
     }
 }
 .line {
-    height: 1rem;
+    height: 12pt;
     width: 100%;
     background-color: #18820a ;
-    margin-bottom: 0.5rem;
+    margin-bottom: 6pt;
 }
 /* .larger-box {
     max-width: 600px;
@@ -380,24 +380,24 @@ header .header-links a:first-child {
 
 .custom-section-1 {
     position: relative;
-    border-radius: 1rem;
+    border-radius: 12pt;
     text-align: left;
     width: 70%;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 24pt auto;
+    padding: 12pt;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 12pt;
     color: #000000;
     
 }
 
 .custom-section-1 p {
     background-color: #ffffff85;
-    padding: 1rem;
-    border-radius: 1rem;
-    word-spacing: 0.2rem;
-    letter-spacing: 0.05rem;
+    padding: 12pt;
+    border-radius: 12pt;
+    word-spacing: 2.4pt;
+    letter-spacing: 0.6pt;
     font-size: 18pt;
     text-align: left;
 }
@@ -406,17 +406,17 @@ header .header-links a:first-child {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 12pt;
+    padding: 12pt 0;
     justify-content: center;
     align-items: center;
 }
 
 .custom-section-1 .contact-buttons a , .link-below-bio a{
     color: white;
-    padding: 0.5rem 2rem;
+    padding: 6pt 24pt;
     background-color:#32cd32;
-    border-radius: 0.2rem;
+    border-radius: 2.4pt;
     transition: 0.1s;
 }
 
@@ -425,30 +425,30 @@ header .header-links a:first-child {
 }
 
 .custom-section-1 > img {
-    width: 15rem;
+    width: 180pt;
     margin: auto;
 }
 
 /* cv */
 .custom-section-2 {
     position: relative;
-    border-radius: 1rem;
+    border-radius: 12pt;
     text-align: left;
     width: 95%;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 24pt auto;
+    padding: 12pt;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 12pt;
     color: #000000;
     background: #7cfc00;
 }
 .custom-section-2 .cv {
-    padding: 5rem 2rem;
+    padding: 60pt 24pt;
     background-color: white;
     font-family: 'Arial';
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 13.2pt;
 }
 .custom-section-2 .centered-text {
     text-align: center;
@@ -476,9 +476,9 @@ footer {
     /* justify-content: space-around;
     flex-wrap: wrap;
     align-items: center; */
-    padding: 5rem 1rem;
+    padding: 60pt 12pt;
     width: 100%;
-    margin-top: 2.7rem;
+    margin-top: 32.4pt;
     overflow-x: hidden;
 }
 footer img {
@@ -488,9 +488,9 @@ footer img {
 footer a {
     color: white;
     color: white;
-    padding: 0.5rem 2rem;
+    padding: 6pt 24pt;
     background-color:#000000d8;
-    border-radius: 0.2rem;
+    border-radius: 2.4pt;
     transition: 0.1s;
 }
 footer a:hover {
@@ -533,7 +533,7 @@ footer a:hover {
 .swiper-slide p {
     /* height: 20rem;
     overflow-y: scroll; */
-    padding-right: 1rem;
+    padding-right: 12pt;
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -549,15 +549,15 @@ footer a:hover {
 }
 
 .review-slider {
-    width: 40rem;
-    margin: 3rem 0;
+    width: 480.01pt;
+    margin: 36pt 0;
 }
 
 .swiper-slide h1 {
     text-align: left;
 }
 .review-slider .swiper-slide {
-    padding: 0 5rem;
+    padding: 0 60pt;
     text-align: left;
 } 
 .review-slider img {
@@ -565,7 +565,7 @@ footer a:hover {
     object-fit: contain;
 }
 .review-slider h2 {
-    padding-bottom: 2rem;
+    padding-bottom: 24pt;
 }
 .fa-star {
     color: gold;
@@ -582,7 +582,7 @@ footer a:hover {
         margin-left: 0 !important;
     }
     .top-row {
-        padding-bottom: 1rem;
+        padding-bottom: 12pt;
     }
 }
 /* @media screen and (max-width: 1015px) {
@@ -603,18 +603,18 @@ footer a:hover {
         text-align: left;
     }
     .review-slider .swiper-slide {
-        padding: 0 2.8rem;
+        padding: 0 33.6pt;
     } 
     .swiper-button-prev, .swiper-button-next {
-        margin: -0.1rem;
+        margin: -1.2pt;
     }
 }
 .simple-bar {
-	max-height: 30rem;
+	max-height: 360.01pt;
 }
 .simplebar-track {
     background-color: #aedfff;
-    width: 0.5rem !important;
+    width: 6pt !important;
 }
 .simplebar-scrollbar {
     background-color: #2f81f7;
@@ -637,9 +637,9 @@ footer a:hover {
 .link-below-bio .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 12pt;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 12pt 0;
 }
 .link-below-bio span {
     opacity: 50%;
