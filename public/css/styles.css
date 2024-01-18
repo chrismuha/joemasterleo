@@ -165,6 +165,7 @@ header .header-links a:first-child {
 .bulleted-text span {
     font-size: 90pt;
     line-height: 36pt;
+    margin-top: -14pt;
 }
 .next-bullets span {
     position: absolute;
@@ -172,15 +173,14 @@ header .header-links a:first-child {
 .next-bullets p {
     padding-left: 26pt;
     line-height: 1.15;
-    padding-top: 12pt;
+}
+.top-six-bullets {
+    min-height: 406.5px;
 }
 .top-six-bullets > div {
     display: flex;
     line-height: 1.15;
     align-items: start;
-}
-.top-six-bullets > div p {
-    padding-top: 12pt;
 }
 .top-six-bullets > div:nth-child(1) {
     display: block;
