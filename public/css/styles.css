@@ -72,6 +72,7 @@ header img {
 }
 header video {
     width: 270px;
+    position: relative;
     padding-top: 6pt;
 }
 @media screen and (max-width: 450px) {
@@ -156,23 +157,29 @@ header .header-links a:first-child {
 .bulleted-text {
     display: flex;
     flex-direction: column;
-    line-height: 36pt;
 }
 /* .bulleted-text p {
     padding-left: 36pt;
 } */
 .bulleted-text span {
     font-size: 90pt;
-    position: relative;
+    line-height: 36pt;
 }
 .next-bullets span {
     position: absolute;
 }
 .next-bullets p {
     padding-left: 26pt;
+    line-height: 1.15;
+    padding-top: 12pt;
 }
 .top-six-bullets > div {
     display: flex;
+    line-height: 1.15;
+    align-items: start;
+}
+.top-six-bullets > div p {
+    padding-top: 12pt;
 }
 .top-six-bullets > div:nth-child(1) {
     display: block;
