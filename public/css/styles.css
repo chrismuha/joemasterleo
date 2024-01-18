@@ -398,7 +398,6 @@ header .header-links a:first-child {
 	background-size: 400% 400%;
 	/* animation: gradient 10s ease infinite; */
 	text-align: left;
-	font-size: 18pt;
 }
 
 /* @keyframes gradient {
@@ -434,7 +433,6 @@ header .header-links a:first-child {
     border-radius: 12pt;
     word-spacing: 2.4pt;
     letter-spacing: 0.6pt;
-    font-size: 18pt;
     text-align: left;
 }
 
@@ -521,6 +519,10 @@ footer img {
     height: 513.50px;
     overflow-x: hidden;
 }
+footer img:nth-child(2) {
+    width: 430px;
+    height: auto;
+}
 footer a {
     color: white;
     color: white;
@@ -542,6 +544,9 @@ footer a:hover {
     footer img {
         height: unset;
         max-width: 600px;
+    }
+    footer img:nth-child(2) {
+        width: 360px;
     }
 }
 @media screen and (max-width: 977px) {
