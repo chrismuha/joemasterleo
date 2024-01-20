@@ -511,6 +511,7 @@ footer {
     flex-wrap: wrap;
     align-items: center; */
     padding: 60pt 12pt;
+    padding-top: 20px;
     width: 100%;
     margin-top: 32.4pt;
     overflow-x: hidden;
@@ -520,7 +521,7 @@ footer img {
     overflow-x: hidden;
 }
 footer img:nth-child(2) {
-    width: 430px;
+    height: 240px !important;
     height: auto;
 }
 footer a {
@@ -544,9 +545,6 @@ footer a:hover {
     footer img {
         height: unset;
         max-width: 600px;
-    }
-    footer img:nth-child(2) {
-        width: 360px;
     }
 }
 @media screen and (max-width: 977px) {
@@ -684,7 +682,7 @@ footer a:hover {
 }
 .link-below-bio span {
     opacity: 50%;
-    font-size: 16pt;
+    font-size: 14pt;
     text-align: center;
     display: flex;
     justify-content: center;
