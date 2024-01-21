@@ -30,11 +30,14 @@ a {
 /* header */
 
 header {
-    background: linear-gradient(to right, #aedfff, white, #ffd6cc);
+    /* background: linear-gradient(to right, #aedfff, white, #ffd6cc); */
+    background: linear-gradient(to right, #aedfff, rgb(211, 227, 247), #ffd6cc);
     /* min-height: 80vh; */
     border-bottom: var(--main-color) 2px solid;
     padding: 24pt 0;
     margin: 32px 0;
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
 }
 
 header:nth-child(1) {
@@ -403,7 +406,7 @@ header .header-links a:first-child {
 	text-align: left;
 }
 
-/* @keyframes gradient {
+@keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
@@ -413,7 +416,7 @@ header .header-links a:first-child {
     100% {
         background-position: 0% 50%;
     }
-} */
+}
 /* custom sections */
 
 .custom-section-1 {
