@@ -73,7 +73,7 @@ header img {
 header video {
     width: 270px;
     position: relative;
-    padding-top: 6pt;
+    padding-top: 12pt;
     padding-bottom: 0pt;
 }
 @media screen and (max-width: 450px) {
@@ -127,9 +127,12 @@ header .header-links a:first-child {
 }
 .top-six-bullets {
     background: white;
+    padding-top: 12pt;
+    padding-right: 12pt;
 }
 .next-bullets {
     background-color: white;
+    padding-right: 12pt;
 }
 .header-image {
     float: left;
@@ -517,12 +520,11 @@ footer {
     overflow-x: hidden;
 }
 footer img {
-    height: 513.50px;
+    height: 462.15px;
     overflow-x: hidden;
 }
 footer img:nth-child(2) {
-    height: 240px !important;
-    height: auto;
+    height: 120px;
 }
 footer a {
     color: white;
@@ -544,7 +546,7 @@ footer a:hover {
 @media screen and (max-width: 475px) {
     footer img {
         height: unset;
-        max-width: 600px;
+        max-width: 540px;
     }
 }
 @media screen and (max-width: 977px) {
