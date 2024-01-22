@@ -37,7 +37,7 @@ header {
     padding: 24pt 0;
     margin: 32px 0;
     background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 5s ease infinite;
 }
 
 header:nth-child(1) {
@@ -126,10 +126,10 @@ header .header-links a:first-child {
 .top-list-wrap {
     /* display: flex;
     align-items: flex-start; */
+    background: white;
     justify-content: center;
 }
 .top-six-bullets {
-    background: white;
     padding-top: 12pt;
     padding-right: 12pt;
 }
@@ -402,7 +402,7 @@ header .header-links a:first-child {
     background: linear-gradient(to right, #aedfff, white, #ffd6cc);
     /* background: #4681ffc2; */
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 5s ease infinite;
 	text-align: left;
 }
 

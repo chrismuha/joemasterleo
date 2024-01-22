@@ -6,6 +6,12 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
 });
 
+let simpleBar = document.querySelectorAll('.simple-bar');
+
+simpleBar.forEach(function (e) {
+    new SimpleBar(e, { autoHide: false });
+});
+
 const seeMore = Array.from(document.querySelectorAll('.seeMore'));
 const seeLess = Array.from(document.querySelectorAll('.seeLess'));
 const moreText = Array.from(document.querySelectorAll('.moreText'));
@@ -88,8 +94,3 @@ seeLessBullets3.addEventListener('click', () => {
     seeLessBullets2.style.display = 'block';
 })
 
-let simpleBar = document.querySelectorAll('.simple-bar');
-
-simpleBar.forEach(function (e) {
-    new SimpleBar(e, { autoHide: false });
-});
