@@ -113,7 +113,11 @@ header .header-links a:first-child {
 .intro-header {
     margin: 24pt 0;
 }
-
+@media screen and (max-width: 425px) {
+    .intro-header, .book-reviews h1 {
+        font-size: 33pt;
+    }
+}
 .top-text, .intro-text, .bulleted-section, .box-text {
     border:solid 12pt #1F5B65;
     padding: 1rem;
