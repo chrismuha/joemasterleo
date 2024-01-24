@@ -197,6 +197,7 @@ header .header-links a:first-child {
     display: block;
     padding-left: 300px;
     padding-right: 6pt;
+    padding-top: 14pt;
 }
 @media screen and (max-width: 565px) {
     .header-image {
@@ -208,6 +209,7 @@ header .header-links a:first-child {
     .top-six-bullets > div:nth-child(1) {
         padding: 0;
         padding-left: 12pt;
+        padding-top: 0;
     }
 }
 .seeMore, .seeLess, .seeMoreReview, .seeLessReview, .seeMoreStyle {
