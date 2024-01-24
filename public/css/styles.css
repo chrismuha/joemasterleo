@@ -42,7 +42,7 @@ header {
 
 header:nth-child(1) {
     margin-top: 0;
-    padding-top: 7pt;
+    padding-top: 0;
 }
 
 header h1 {
@@ -161,7 +161,7 @@ header .header-links a:first-child {
 }
 .bulleted-section, .link-below-bio {
     margin: auto;
-    padding: 24pt;
+    padding: 30pt;
 }
 .bulleted-section b {
     font-size: 22pt;
@@ -570,6 +570,9 @@ footer a:hover {
     }
     .top-text, .intro-text, .bulleted-section, .box-text, .custom-section-1, .video-container {
         width: 95%;
+    }
+    .bulleted-section {
+        width: 100%;
     }
 }
     
