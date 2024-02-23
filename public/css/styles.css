@@ -31,7 +31,7 @@ a {
 
 header {
     /* background: linear-gradient(to right, #aedfff, white, #ffd6cc); */
-    background: linear-gradient(to right, #aedfff, rgb(211, 227, 247), #ffd6cc);
+    background: linear-gradient(to right, #aedfff, #d3e3f7, #ffd6cc);
     /* min-height: 80vh; */
     border-bottom: var(--main-color) 2px solid;
     padding: 24pt 0;
@@ -213,7 +213,7 @@ header .header-links a:first-child {
     }
 }
 .seeMore, .seeLess, .seeMoreReview, .seeLessReview, .seeMoreStyle {
-    color: #1F5B65;
+    color: #1f5b65;
     cursor: pointer;
 }
 .top-images {
@@ -251,7 +251,7 @@ header .header-links a:first-child {
     left: 0;
     width: 100%;
     height: 100%;
-    border: #1F5B65 12pt solid;
+    border: #1f5b65 12pt solid;
   }
 
 /* iframe {
@@ -260,7 +260,7 @@ header .header-links a:first-child {
     left: 0;
     width: 50rem;
     height: 30rem;
-    border: #1F5B65 1rem solid;
+    border: #1f5b65 1rem solid;
 } */
 /* @media screen and (max-width:900px) {
     .video-section {
@@ -594,7 +594,7 @@ footer a:hover {
 
 .swiper-button-prev, .swiper-button-next {
     top: var(--swiper-navigation-top-offset,150px) !important;
-    color: #111;
+    color: black;
 }
 
 .review-section {
@@ -705,10 +705,10 @@ footer a:hover {
     justify-content: center;
 }
 .link-below-bio .contact-buttons a {
-    background-color: #00BFFF;
+    background-color: #00bfff;
 }
 .link-below-bio .contact-buttons a:hover {
-    background-color: #187BCD;
+    background-color: #187bcd;
 }
 
 /* Upper layer codes */
