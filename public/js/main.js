@@ -42,7 +42,7 @@ seeMore.forEach(e => {
 
 seeLess.forEach(e => {
     e.addEventListener('click', (e) => {
-        const parent = e.target.closest('.has-read-more-feature'); 
+        const parent = e.target.closest('.has-read-more-feature');
         const moreText = parent.querySelector('.moreText');
         moreText.style.display = 'none';
         const seeMore = parent.querySelector('.seeMore');
