@@ -1,1 +1,32 @@
-PLACEHOLDER_WORKFLOW_CONTENT
+name: Code Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests If Present
+        run: npm run test --if-present
+
+      - name: Build Project
+        run: |
+          BUILD_COMMAND="$(node -e "const p = require('./package.json'); const s = p.scripts || {}; const deps = { ...(p.dependencies || {}), ...(p.devDependencies || {}) }; if (s['build:web']) console.log('npm run build:web'); else if (deps.vite) console.log('npx vite build'); else if (s.build) console.log('npm run build');")"
+          test -n "$BUILD_COMMAND"
+          $BUILD_COMMAND
