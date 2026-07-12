@@ -8,6 +8,10 @@ updates:
     commit-message:
       prefix: "deps"
     rebase-strategy: "auto"
+    ignore:
+      # Electron Forge 7 currently requires @electron/fuses 1.x.
+      - dependency-name: "@electron/fuses"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
