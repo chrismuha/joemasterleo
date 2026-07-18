@@ -20,7 +20,12 @@ jobs:
           node-version: 22
 
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Run Tests If Present
         run: npm run test --if-present
