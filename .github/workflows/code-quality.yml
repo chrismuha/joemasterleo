@@ -14,50 +14,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v7
 
-      - name: Detect Node Project
-        id: node-project
-        shell: bash
-        run: |
-          if [[ -f package.json ]]; then
-            echo "present=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "present=false" >> "$GITHUB_OUTPUT"
-            echo "No root package.json; skipping Node checks."
-          fi
-
       - name: Setup Node
-        if: steps.node-project.outputs.present == 'true'
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 22
 
       - name: Install Dependencies
-        if: steps.node-project.outputs.present == 'true'
         run: npm install
 
       - name: Run Tests If Present
-        if: steps.node-project.outputs.present == 'true'
         run: npm run test --if-present
 
-      - name: Build Project If Present
-        if: steps.node-project.outputs.present == 'true'
+      - name: Build Project
         run: |
-          node <<'NODE'
-          const { spawnSync } = require('node:child_process');
-          const pkg = require('./package.json');
-          const scripts = pkg.scripts || {};
-          const dependencies = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
-
-          let command;
-          if (scripts['build:web']) command = ['npm', ['run', 'build:web']];
-          else if (dependencies.vite) command = ['npx', ['vite', 'build']];
-          else if (scripts.build) command = ['npm', ['run', 'build']];
-
-          if (!command) {
-            console.log('No build command detected; skipping build.');
-            process.exit(0);
-          }
-
-          const result = spawnSync(command[0], command[1], { stdio: 'inherit' });
-          process.exit(result.status ?? 1);
-          NODE
+          BUILD_COMMAND="$(node -e "const p = require('./package.json'); const s = p.scripts || {}; const deps = { ...(p.dependencies || {}), ...(p.devDependencies || {}) }; if (s['build:web']) console.log('npm run build:web'); else if (deps.vite) console.log('npx vite build'); else if (s.build) console.log('npm run build');")"
+          test -n "$BUILD_COMMAND"
+          $BUILD_COMMAND
