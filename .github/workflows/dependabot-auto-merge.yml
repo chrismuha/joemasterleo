@@ -1,4 +1,4 @@
-# Dependabot updates are squash-merged only after the build check succeeds.
+# Dependabot updates are squash-merged only after the static check succeeds.
 
 name: Dependabot auto-merge
 
@@ -12,7 +12,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  merge-after-build:
+  merge-after-static-check:
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 35
@@ -24,34 +24,34 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Wait for successful build
+      - name: Wait for successful static check
         shell: bash
         run: |
           for attempt in {1..120}; do
             check="$({
               gh api \
                 "repos/$GITHUB_REPOSITORY/commits/$HEAD_SHA/check-runs?per_page=100" \
-                --jq '([.check_runs[] | select(.name == "build")] | sort_by(.started_at) | last) // {}'
+                --jq '([.check_runs[] | select(.name == "static-check")] | sort_by(.started_at) | last) // {}'
             })"
 
             status="$(jq -r '.status // "missing"' <<< "$check")"
             conclusion="$(jq -r '.conclusion // ""' <<< "$check")"
 
-            echo "Build check status: $status${conclusion:+ ($conclusion)}"
+            echo "Static check status: $status${conclusion:+ ($conclusion)}"
 
             if [[ "$status" == "completed" && "$conclusion" == "success" ]]; then
               exit 0
             fi
 
             if [[ "$status" == "completed" ]]; then
-              echo "The build check did not succeed; leaving the pull request open."
+              echo "The static check did not succeed; leaving the pull request open."
               exit 1
             fi
 
             sleep 15
           done
 
-          echo "Timed out waiting for the build check; leaving the pull request open."
+          echo "Timed out waiting for the static check; leaving the pull request open."
           exit 1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
