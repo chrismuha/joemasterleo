@@ -1,4 +1,4 @@
-# Dependabot updates are squash-merged only after the static check succeeds.
+# Dependabot updates are squash-merged only after the build check succeeds.
 
 name: Dependabot auto-merge
 
@@ -11,59 +11,79 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: dependabot-auto-merge-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
-  merge-after-static-check:
+  merge-after-build:
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 35
 
     steps:
       - name: Read Dependabot update metadata
-        id: metadata
         uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Wait for successful static check
+      - name: Wait for successful build
         shell: bash
         run: |
           for attempt in {1..120}; do
-            check="$({
+            check="$(
               gh api \
                 "repos/$GITHUB_REPOSITORY/commits/$HEAD_SHA/check-runs?per_page=100" \
-                --jq '([.check_runs[] | select(.name == "static-check")] | sort_by(.started_at) | last) // {}'
-            })"
+                --jq '([.check_runs[] | select(.name == "build")] | sort_by(.started_at) | last) // {}'
+            )"
 
             status="$(jq -r '.status // "missing"' <<< "$check")"
             conclusion="$(jq -r '.conclusion // ""' <<< "$check")"
 
-            echo "Static check status: $status${conclusion:+ ($conclusion)}"
+            echo "Build check status: $status${conclusion:+ ($conclusion)}"
 
             if [[ "$status" == "completed" && "$conclusion" == "success" ]]; then
               exit 0
             fi
 
             if [[ "$status" == "completed" ]]; then
-              echo "The static check did not succeed; leaving the pull request open."
+              echo "The build check did not succeed; leaving the pull request open."
               exit 1
             fi
 
             sleep 15
           done
 
-          echo "Timed out waiting for the static check; leaving the pull request open."
+          echo "Timed out waiting for the build check; leaving the pull request open."
           exit 1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
-      - name: Merge tested commit
+      - name: Merge tested commit and delete branch
+        shell: bash
         run: |
-          gh pr merge \
-            --squash \
-            --delete-branch \
-            --match-head-commit "$HEAD_SHA" \
-            "$PR_URL"
+          for attempt in {1..5}; do
+            echo "Merge attempt $attempt of 5"
+            if gh pr merge \
+              --squash \
+              --delete-branch \
+              --match-head-commit "$HEAD_SHA" \
+              "$PR_URL"; then
+              exit 0
+            fi
+
+            state="$(gh pr view "$PR_URL" --json state --jq '.state' 2>/dev/null || true)"
+            if [[ "$state" == "MERGED" ]]; then
+              echo "The pull request was merged by another workflow run."
+              exit 0
+            fi
+
+            sleep $((attempt * 15))
+          done
+
+          echo "GitHub rejected all merge attempts; leaving the tested pull request open."
+          exit 1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
