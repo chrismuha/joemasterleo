@@ -1,3 +1,4 @@
+# BEGIN MCR shared ignore rules
 # Dependencies
 node_modules/
 
@@ -53,8 +54,6 @@ release/*
 !release/.gitkeep
 
 # Native mobile build output
-/android/
-/ios/
 android/.gradle/
 android/**/build/
 ios/build/
@@ -74,6 +73,12 @@ Electron Framework.framework/
 *.swp
 *.swo
 
+# Dropbox numbered dependency and conflict copies
+node_modules */
+*conflicted copy*
+# END MCR shared ignore rules
+**/.DS_Store
+**/._*
 # Dropbox numbered dependency and conflict copies
 node_modules */
 *conflicted copy*
