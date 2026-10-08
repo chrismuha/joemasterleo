@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   build:
+    name: static-check
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
