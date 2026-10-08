@@ -34,7 +34,7 @@ jobs:
             check="$(
               gh api \
                 "repos/$GITHUB_REPOSITORY/commits/$HEAD_SHA/check-runs?per_page=100" \
-                --jq '([.check_runs[] | select(.name == "build")] | sort_by(.started_at) | last) // {}'
+                --jq '([.check_runs[] | select(.name == "static-check")] | sort_by(.started_at) | last) // {}'
             )"
 
             status="$(jq -r '.status // "missing"' <<< "$check")"
