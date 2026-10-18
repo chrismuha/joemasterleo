@@ -1,0 +1,17 @@
+name: Commit email
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  notify:
+    if: vars.COMMIT_EMAIL_ENABLED == 'true' && github.actor != 'dependabot[bot]'
+    uses: chrismuha/.github/.github/workflows/commit-email-reusable.yml@main
+    with:
+      mail_from: ${{ vars.COMMIT_EMAIL_FROM }}
+      mail_to: ${{ vars.COMMIT_EMAIL_TO }}
+    secrets:
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
