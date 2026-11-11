@@ -1,4 +1,4 @@
-# Dependabot updates are squash-merged only after the build check succeeds.
+# Only dependency-only patch/minor updates are merged after exact-commit checks succeed.
 
 name: Dependabot auto-merge
 
@@ -17,15 +17,40 @@ concurrency:
 
 jobs:
   merge-after-build:
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 35
 
     steps:
       - name: Read Dependabot update metadata
+        id: metadata
         uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Restrict automatic merges to patch and minor updates
+        env:
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+        run: |
+          case "$UPDATE_TYPE" in
+            version-update:semver-patch|version-update:semver-minor) ;;
+            *) echo "This update requires manual review."; exit 1 ;;
+          esac
+
+      - name: Checkout trusted base safety checks
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify dependency-only changes and reject regressions
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          node --test .github/scripts/check-dependency-update.test.cjs
+          node .github/scripts/check-dependency-update.cjs "$BASE_SHA" "$HEAD_SHA"
 
       - name: Wait for successful build
         shell: bash
@@ -63,6 +88,11 @@ jobs:
       - name: Merge tested commit and delete branch
         shell: bash
         run: |
+          current_base="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq '.object.sha')"
+          if [[ "$current_base" != "$BASE_SHA" ]]; then
+            echo "Main changed after this update was checked; wait for a rebase and new CI."
+            exit 1
+          fi
           for attempt in {1..5}; do
             echo "Merge attempt $attempt of 5"
             if gh pr merge \
@@ -88,3 +118,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           PR_URL: ${{ github.event.pull_request.html_url }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
